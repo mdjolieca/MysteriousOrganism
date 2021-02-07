@@ -1,2 +1,2 @@
 # MysteriousOrganism
-Mysterious Organism Code Challeng
+Mysterious Organism Code Challenge

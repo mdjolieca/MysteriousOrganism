@@ -68,7 +68,7 @@ pAequors.forEach( pAequor =>{
   
 });
 
-for(let j=1; j<30;j++) {
+for(let j=1; j< pAequors.length; j++) {
   pAequors[j-1].compareDNA(pAequors[j]);
 }
 

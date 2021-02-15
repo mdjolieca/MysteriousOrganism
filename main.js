@@ -56,7 +56,6 @@ for(let j=0; j<30;j++) {
    do{
     pAeqourWillSurvive = pAequorFactory(j,mockUpStrand());
    } while(!pAeqourWillSurvive.willLikelySurvive()) 
-   console.log(pAeqourWillSurvive.willLikelySurvive());
    pAequors.push(pAeqourWillSurvive);
 }
 

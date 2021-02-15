@@ -51,19 +51,26 @@ const pAequorFactory = (specimenNum, dna) => {
 }
 
 const pAequors = [];
+let pAeqourWillSurvive;
 for(let j=0; j<30;j++) {
-  pAequors.push(pAequorFactory(j,mockUpStrand()) );
+   do{
+    pAeqourWillSurvive = pAequorFactory(j,mockUpStrand());
+   } while(!pAeqourWillSurvive.willLikelySurvive()) 
+   console.log(pAeqourWillSurvive.willLikelySurvive());
+   pAequors.push(pAeqourWillSurvive);
 }
+
 
 pAequors.forEach( pAequor =>{
   console.log('specimenNum: ' +pAequor.specimenNum);
   console.log('DNA:         ' + pAequor.dna);
-  console.log('Mutated DNA: ' +pAequor.mutate());
   console.log('Likely to Survive: ' +pAequor.willLikelySurvive());
+  console.log('Mutated DNA: ' +pAequor.mutate());
+  
 });
 
 for(let j=1; j<30;j++) {
-   pAequors[j-1].compareDNA(pAequors[j]);
+  pAequors[j-1].compareDNA(pAequors[j]);
 }
 
 
